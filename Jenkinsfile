@@ -10,7 +10,7 @@ node('b02b4c3c1c8f') {
 		sh 'ant -f build.xml -v'   
 	}  
   	stage('Deploy') {    
-		aws s3 cp /workspace/java-pipeline/dist/rectangle-3.jar s3://jenkins-s3bucket-113alwaw3qgul.s3.amazonaws.com/rectangle-3.jar   
+		sh 'aws s3 cp /workspace/java-pipeline/dist/rectangle-4.jar s3://jenkins-s3bucket-113alwaw3qgul.s3.amazonaws.com/rectangle-4.jar'   
 	} 
 	stage('Report') {    
 		
