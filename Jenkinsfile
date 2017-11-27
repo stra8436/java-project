@@ -10,7 +10,7 @@ node('b02b4c3c1c8f') {
 		sh 'ant -f build.xml -v'   
 	}  
   	stage('Deploy') {		
-		sh 'aws s3 cp /workspace/java-pipeline/dist/rectangle-23.jar s3://jenkins-s3bucket-113alwaw3qgul.s3.amazonaws.com/'	
+		sh 'aws s3 cp /workspace/java-pipeline/dist/rectangle-24.jar s3://jenkins-s3bucket-113alwaw3qgul.s3.amazonaws.com/rectangle-24.jar'	
 	} 
 	stage('Report') {    
 		withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'ded99645-f496-4b05-8ad3-9276e197db95', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]) {
