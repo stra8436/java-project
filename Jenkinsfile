@@ -1,6 +1,6 @@
 properties([pipelineTriggers([githubPush()])])
 
-node('b02b4c3c1c8f') {   
+node('linux') {   
 	stage('Unit Tests') {    
 		git 'https://github.com/stra8436/java-project.git'
 		sh 'ant'
